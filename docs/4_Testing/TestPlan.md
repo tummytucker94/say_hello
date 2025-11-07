@@ -22,7 +22,7 @@ Verify that the implementation satisfies the SRS and SDS requirements.
 ## 4. Test Cases
 
 | ID | Description | Input | Expected Output |
-|----|--------------|--------|-----------------|
+______________________________________________
 | TC1 | Typical name | Jermaine | Hello Jermaine! |
 | TC2 | Alternate name | Maria | Hello Maria! |
 | TC3 | Blank input | [Enter] | Hello there! |
