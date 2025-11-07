@@ -9,9 +9,11 @@ logging.basicConfig(
 )
 
 if __name__ == "__main__":
-    start = time.time()
     user_name = input("Enter your name: ")
+
+    start = time.perf_counter()   # higher-precision timer
     greeting = say_hello(user_name)
+    end = time.perf_counter()
+
     print(greeting)
-    end = time.time()
-    logging.info(f"Greeted user '{user_name or 'there'}' in {end - start:.4f} seconds")
+    logging.info(f"Greeted user '{user_name or 'there'}' in {end - start:.6f} seconds")
