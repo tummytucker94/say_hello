@@ -16,10 +16,10 @@ if __name__ == "__main__":
     # Measure execution time
     start = time.time()
     user_name = input("Enter your name: ")
-    greeting = say_hello(user_name)
+    greeting_msg = say_hello(user_name)
     end = time.time()
 
     # Print and log
-    print(greeting)
+    print(greeting_msg)
     logging.info(f"Greeted user '{user_name or 'there'}' in {end - start:.4f} seconds")
     
