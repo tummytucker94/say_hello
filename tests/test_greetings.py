@@ -1,9 +1,13 @@
 from src.functions.greetings import say_hello
 import time
 
-def test_say_hello_with_expected_input():
+def test_say_hello_with_typical_name():
     result = say_hello("Jermaine")
     assert result == "Hello Jermaine!"
+
+def test_say_hello_with_alternate_name():
+    result = say_hello("Maria")
+    assert result == "Hello Maria!"
 
 def test_say_hello_with_space_only():
     result = say_hello(" ")
