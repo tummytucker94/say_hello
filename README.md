@@ -7,6 +7,7 @@ A simple Python console application that greets users by name — built to pract
 ---
 
 ## 📜 Table of Contents
+
 1. [Project Overview](#project-overview)
 2. [Objectives & Scope](#objectives--scope)
 3. [System Design](#system-design)
@@ -22,52 +23,61 @@ A simple Python console application that greets users by name — built to pract
 
 ## 🧭 Project Overview
 
-**Purpose:**  
+**Purpose:**
 To gain hands-on experience building software using the **SDLC** process while creating a functional console application.
 
-**Problem Definition:**  
+**Problem Definition:**
+
 > “I want to create a software that greets the user when they enter their name because I want to gain experience creating software using the SDLC process.”
 
-**Goal:**  
-- Learn to plan, design, code, test, and maintain a Python application end-to-end.
+**Goal:**
 
-**Objective:**  
-- Develop a console program that greets the user based on their name input and handles blank or whitespace inputs gracefully.
+* Learn to plan, design, code, test, and maintain a Python application end-to-end.
+
+**Objective:**
+
+* Develop a console program that greets the user based on their name input and handles blank or whitespace inputs gracefully.
 
 ---
 
 ## 🎯 Objectives & Scope
 
 ### In Scope
-- Accepting user name input  
-- Printing a personalized greeting  
-- Handling blank or whitespace-only input  
+
+* Accepting user name input
+* Printing a personalized greeting
+* Handling blank or whitespace-only input
 
 ### Out of Scope
-- GUI design  
-- Saving or storing user data  
-- Complex validation  
 
-**Performance Requirement:**  
-- Must respond in under **1 second**
+* GUI design
+* Saving or storing user data
+* Complex validation
+
+**Performance Requirement:**
+
+* Must respond in under **1 second**
 
 ---
 
 ## 🧠 System Design
 
 ### Architecture
-- **Type:** Single-module, sequential console application  
-- **Language:** Python 3.x  
-- **Platform:** macOS / Linux / Windows (any Python-supported environment)  
+
+* **Type:** Single-module, sequential console application
+* **Language:** Python 3.x
+* **Platform:** macOS / Linux / Windows (any Python-supported environment)
 
 ### Execution Flow
-1. Start  
-2. Prompt user for name  
-3. Read and validate input  
-4. Display greeting  
-5. End  
+
+1. Start
+2. Prompt user for name
+3. Read and validate input
+4. Display greeting
+5. End
 
 ### Pseudocode
+
 ```text
 BEGIN
   DISPLAY "Enter your name: "
@@ -79,3 +89,159 @@ BEGIN
   ENDIF
   DISPLAY greeting_msg
 END
+```
+
+### Data Dictionary
+
+| Name           | Type   | Description                  |
+| -------------- | ------ | ---------------------------- |
+| `user_name`    | string | Name entered by the user     |
+| `greeting_msg` | string | Constructed greeting message |
+
+---
+
+## 🔧 Implementation
+
+### Environment & Dependencies
+
+* **Language:** Python 3.x
+* **External Libraries:** None (standard library only)
+* **Virtual Environment:** `.venv/` created with
+
+  ```bash
+  python -m venv .venv
+  source .venv/bin/activate
+  ```
+
+### How to Build & Run
+
+```bash
+# Clone the repo
+git clone https://github.com/tummytucker94/say_hello.git
+cd say_hello
+
+# (Optional) Create virtual environment
+python -m venv .venv
+source .venv/bin/activate   # macOS/Linux
+
+# Run the program
+python src/main.py
+```
+
+### Coding Standards
+
+* PEP 8 style conventions
+* Use of f-strings for formatting
+* Single-purpose, well-named functions
+* Input sanitized with `.strip()` and defaults to “there” if blank
+
+---
+
+## 🤪 Testing
+
+### Strategy
+
+* **Level:** Unit & functional (console I/O)
+* **Method:** Manual black-box + automated pytest
+* **Framework:** `pytest`, `pytest-cov` (optional)
+* **Performance:** Must execute under 1 second
+
+### Test Cases
+
+| ID  | Description    | Input                              | Expected Output                           |
+| --- | -------------- | ---------------------------------- | ----------------------------------------- |
+| TC1 | Typical name   | Jermaine                           | Hello Jermaine!                           |
+| TC2 | Alternate name | Maria                              | Hello Maria!                              |
+| TC3 | Blank input    | [Enter]                            | Hello there!                              |
+| TC4 | Spaces only    | `" "`                              | Hello there!                              |
+| TC5 | Long name      | Supercalifragilisticexpialidocious | Hello Supercalifragilisticexpialidocious! |
+| TC6 | Performance    | Any                                | Response < 1 s                            |
+
+### How to Run Tests
+
+```bash
+# Install dependencies
+pip install pytest pytest-cov
+
+# Run tests
+pytest -v
+
+# Optional coverage
+pytest --maxfail=1 --disable-warnings -q --cov=src --cov-report=term-missing
+```
+
+All tests should **pass** with 100 % success and sub-1 second response time.
+
+---
+
+## 🛠️ Maintenance
+
+### Versioning
+
+Semantic Versioning: **MAJOR.MINOR.PATCH**
+
+```bash
+git tag -a v1.0.0 -m "Initial release"
+git push --tags
+```
+
+### Change Control
+
+1. Update documentation (SRS/SDS) if functionality changes
+2. Write or modify tests first (TDD)
+3. Implement change → PR → Review → Merge
+
+### KPIs
+
+| Metric                  | Target                        |
+| ----------------------- | ----------------------------- |
+| Mean Time to Fix (MTTR) | < 1 day                       |
+| Test Pass Rate          | 100 %                         |
+| Docs Freshness          | Updated within 24 h of change |
+
+---
+
+## 📁 Repository Structure
+
+```
+say_hello/
+├── src/
+│   ├── main.py
+│   └── functions/
+│       └── greetings.py
+├── tests/
+│   └── test_greetings.py
+├── docs/
+│   ├── 1_Planning/
+│   ├── 2_Design/
+│   ├── 3_Implementation/
+│   ├── 4_Testing/
+│   └── 5_Maintenance/
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit changes (`git commit -m "Add new feature"`)
+4. Push branch (`git push origin feature/new-feature`)
+5. Submit a pull request
+
+---
+
+## ⚖️ License
+
+This project is open-sourced under the **MIT License**.
+See `LICENSE` for details.
+
+---
+
+**Author:** Jermaine Tucker
+**Version:** 1.0.0
+**Last Updated:** November 2025
