@@ -230,7 +230,7 @@ SAY_HELLO/
 │   │   └── greetings.py
 │   ├── __init__.py
 │   ├── main.py
-│   └── runtime.log
+│ 
 ├── tests/
 │   └── test_greetings.py
 ├── README.md
@@ -262,5 +262,6 @@ See `LICENSE` for details.
 **Author:** Jermaine Tucker
 **Version:** 1.0.0
 **Last Updated:** November 2025
+
 
 
