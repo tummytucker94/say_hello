@@ -53,22 +53,29 @@ python src/main.py
 
 ## 6. Repository Structure
 ```
-say_hello/
-├── README.md
-├── requirements.txt
+SAY_HELLO/
+├── .pytest_cache/
+├── .venv/
+├── docs/
+│   ├── 1_Planning/
+│   ├── 2_Design/
+│   ├── 3_Implementation/
+│   ├── 4_Testing/
+│   └── 5_Maintenance/
 ├── src/
+│   ├── functions/
+│   │   └── __init__.py
 │   ├── main.py
-│   └── functions/
-│       └── greetings.py
+│   └── runtime.log
 ├── tests/
-│   └── test_greetings.py
-└── docs/
-    └── (all SDLC documentation)
+├── README.md
+└── runtime.log
+
 ```
 
 ---
 
-## 7. Commit Log (Example)
+## 7. Commit Log
 | Commit | Date | Summary |
 |---------|------|----------|
 | [03ecace251b7cae86fc6aad30da8505dc71335e1](https://github.com/tummytucker94/say_hello/commit/03ecace251b7cae86fc6aad30da8505dc71335e1) | 11/06/2025 | Initial commit: add hello program |
