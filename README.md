@@ -207,8 +207,6 @@ git push --tags
 # SAY_HELLO Repository Structure
 
 SAY_HELLO/
-├── .pytest_cache/
-├── .venv/
 ├── docs/
 │   ├── 1_Planning/
 │   │   ├── Project_Overview.md
@@ -225,7 +223,6 @@ SAY_HELLO/
 │   └── 5_Maintenance/
 ├── src/
 │   ├── functions/
-│   │   ├── __pycache__/
 │   │   ├── __init__.py
 │   │   └── greetings.py
 │   ├── __init__.py
@@ -262,6 +259,7 @@ See `LICENSE` for details.
 **Author:** Jermaine Tucker
 **Version:** 1.0.0
 **Last Updated:** November 2025
+
 
 
 
