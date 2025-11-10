@@ -204,21 +204,23 @@ git push --tags
 ## 📁 Repository Structure
 
 ```
-say_hello/
-├── src/
-│   ├── main.py
-│   └── functions/
-│       └── greetings.py
-├── tests/
-│   └── test_greetings.py
+SAY_HELLO/
+├── .pytest_cache/
+├── .venv/
 ├── docs/
 │   ├── 1_Planning/
 │   ├── 2_Design/
 │   ├── 3_Implementation/
 │   ├── 4_Testing/
 │   └── 5_Maintenance/
+├── src/
+│   ├── functions/
+│   │   └── __init__.py
+│   ├── main.py
+│   └── runtime.log
+├── tests/
 ├── README.md
-└── requirements.txt
+└── runtime.log
 ```
 
 ---
@@ -245,3 +247,4 @@ See `LICENSE` for details.
 **Author:** Jermaine Tucker
 **Version:** 1.0.0
 **Last Updated:** November 2025
+
