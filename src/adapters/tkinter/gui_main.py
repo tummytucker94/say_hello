@@ -2,6 +2,32 @@ from src.core.functions.greetings import say_hello
 
 import tkinter as tk
 
+def create_app():
+    """Create Tkinter app and return root & widgets (NO mainloop here)."""
+    root = tk.Tk()
+    root.title("Say Hello")
+
+    name_entry = tk.Entry(root)
+    name_entry.pack()
+
+    output_label = tk.Label(root, text="")
+    output_label.pack()
+
+    def on_greet():
+        name = name_entry.get()
+        output_label.config(text=build_greeting(name))
+
+    greet_button = tk.Button(root, text="Say Hello", command=on_greet)
+    greet_button.pack()
+
+    # IMPORTANT: just return; no mainloop here
+    return root, name_entry, greet_button, output_label
+
+def run():
+    """Run app normally."""
+    root, *_ = create_app()
+    root.mainloop()
+    
 def main():
     root = tk.Tk()
     root.title("Say Hello")
