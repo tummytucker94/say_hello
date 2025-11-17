@@ -15,7 +15,7 @@ def create_app():
 
     def on_greet():
         name = name_entry.get()
-        output_label.config(text=build_greeting(name))
+        output_label.config(text=say_hello(name))
 
     greet_button = tk.Button(root, text="Say Hello", command=on_greet)
     greet_button.pack()
@@ -27,7 +27,7 @@ def run():
     """Run app normally."""
     root, *_ = create_app()
     root.mainloop()
-    
+
 def main():
     root = tk.Tk()
     root.title("Say Hello")
