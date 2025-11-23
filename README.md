@@ -1,4 +1,3 @@
-````markdown
 # 👋 Say Hello Software — Version 1.1.0
 
 A Python application that greets users by name through both **Console** **and** **GUI (Tkinter)** interfaces — built as a full **Software Development Life Cycle (SDLC)** project with complete documentation, testing, architecture, and design specifications.
@@ -52,6 +51,7 @@ In **v1.1.0**, the project expanded with:
 - Greeting output label  
 - Persistent window  
 - Fast response time (<2 seconds)
+- 
 
 ### **Shared Core Logic**
 Both UIs use:
@@ -534,3 +534,4 @@ All tests passed.
 ---
 
 ```
+
