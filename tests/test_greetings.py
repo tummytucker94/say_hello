@@ -1,4 +1,4 @@
-from src.functions.greetings import say_hello
+from src.core.functions.greetings import say_hello
 import time
 
 def test_say_hello_with_typical_name():
